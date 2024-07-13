@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft Datapack Creator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="420x420" href="/favicon-420x420.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="apple-mobile-web-app-title" content="MC-Custom-DataPacks">
+  <meta name="application-name" content="MC-Custom-DataPacks">
+  <meta name="msapplication-TileColor" content="#da5420c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<header>
+  <div class="tsr">
+    <div class="tsr-content">
+      <p>
+        <label for="theme-select">Thema auswählen:
+
+        </label>
+        <select id="theme-select">
+          <option value="light-mode">ENGEL</option>
+          <option value="dark-mode">TEUFEL</option>
+          <option value="toxic-mode">TOXIC</option>
+        </select>
+      </p>
+    </div>
+    <div class="dropdown-confirm">
+      <button onclick="applyTheme()">Bestätigen</button>
+    </div>
+  </div>
+  <center>
+    <h1><a href="index.html"><b><u>|<img src="images/logo.gif" width="42" height="auto"> | -WhiteLowCustom's- | <img
+              src="images/logo.gif" width="42" height="auto">|</u></b></a></h1>
+    <hr>
+    <hr>
+    <nav class="navigation">
+      <br>
+      <button><a href="index.html" alt="Startseite">STARTSEITE</a></button>
+    </nav>
+    <hr>
+    <hr>
+    <br>
+  </center>
+</header>
+
+<body>
+  <section>
+    <center>
+      <u>Seite:</u>
+      <p><a href="index.html">1</a> | <a href="2.html">2</a></p>
+      <div class="container">
+        <h1>Minecraft Datapack Creator</h1>
+        <form id="datapack-form">
+          <label for="name">Datapack Name:
+
+          </label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="description">Description:
+
+          </label>
+          <input type="text" id="description" name="description" required>
+
+          <label for="format">Pack Format:
+
+          </label>
+          <select id="format" name="format" required>
+            <option value="11">1.19.4 - 1.20.6</option>
+            <option value="12">1.21 oder Neuer</option>
+          </select>
+
+          <label for="author">Author:</label>
+          <input type="text" id="author" name="author">
+
+          <hr>
+
+          <fieldset>
+            <legend>Features:</legend>
+            <input type="checkbox" id="op_villagers" name="features" value="op_villagers"><br>
+            <label for="op_villagers">
+              <img
+                src="https://www.9minecraft.net/wp-content/uploads/2021/08/Minecraft-But-Villager-Trades-are-OP-Data-Pack-Thumbnail.jpg"
+                alt="Fast mining" width="auto" height="420"> <!-- "images/BILD.png" -->
+              <p>Villager's OP-Items</p>
+            </label>
+            <button onclick="saveDatapack('op_villagers')">Save Datapack</button>
+            <br>
+            <hr>
+            <br>
+            <div class="feature">
+              <input type="checkbox" id="op_loot" name="features" value="op_loot"><br>
+              <label for="op_loot">
+                <img src="https://i.ytimg.com/vi/IpYGNIAgwR0/maxresdefault.jpg" alt="Fast mining" width="auto"
+                  height="420">
+                <!-- "images/BILD.png" -->
+                <p>Bad Mobs drop OP-Loot</p>
+              </label>
+              <button onclick="saveDatapack('op_loot')">Save Datapack</button>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="feature">
+              <input type="checkbox" id="fast_mining" name="features" value="fast_mining"><br>
+              <label for="fast_mining">
+                <img src="https://i.ytimg.com/vi/122F7vzePyM/maxresdefault.jpg" alt="Fast mining" width="auto"
+                  height="420">
+                <!-- "images/BILD.png" -->
+                <p>Fast Mining</p>
+              </label>
+              <button type="button" onclick="saveDatapack('fast_mining')">Save Datapack</button>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="feature">
+              <input type="checkbox" id="no_fall_damage" name="features" value="no_fall_damage"><br>
+              <label for="no_fall_damage">
+                <img src="https://i.ytimg.com/vi/6z7LOlk615A/maxresdefault.jpg" alt="Fast mining" width="auto"
+                  height="420">
+                <!-- "images/BILD.png" -->
+                <p>Kein Fall Schaden</p>
+              </label>
+              <button onclick="saveDatapack('no_fall_damage')">Save Datapack</button>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="feature">
+              <input type="checkbox" id="instant_kill" name="features" value="instant_kill"><br>
+              <label for="instant_kill">
+                <img src="https://i.ytimg.com/vi/SPWiBsOL6_A/maxresdefault.jpg" alt="Fast mining" width="auto"
+                  height="420">
+                <!-- "images/BILD.png" -->
+                <p>Instant Kill</p>
+              </label>
+              <button onclick="saveDatapack('instant_kill')">Save Datapack</button>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="feature">
+              <input type="checkbox" id="infinite_health" name="features" value="infinite_health"><br>
+              <label for="infinite_health">
+                <img src="https://i.ytimg.com/vi/IsDtF-HtRng/maxresdefault.jpg" alt="Fast mining" width="auto"
+                  height="420">
+                <!-- "images/BILD.png" -->
+                <p>Infinite Health</p>
+              </label>
+              <button onclick="saveDatapack('infinite_health')">Save Datapack</button>
+            </div>
+            <br>
+            <br>
+            <button type="submit">Create Custom-Datapack</button>
+            <br>
+            <br>
+            <!-- Weitere Features hier einfügen -->
+          </fieldset>
+          <br>
+          <br>
+          <u>Seite:</u>
+          <p><a href="index.html">1</a> | <a href="2.html">2</a></p>
+          <hr>
+          <br>
+      </div>
+      </form>
+      </div>
+    </center>
+  </section>
+  <br>
+  <hr>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+  <script src="script.js"></script>
+  <center>
+    <hr>
+    <footer>
+      <p>&copy; 2024</p>
+      <p><a href=index.html target="_blank"><b><u>WhiteLow-Designs&trade;</u></b></a>.</p>
+      <p>All rights reserved.</p>
+      <nav class="navigation">
+        <button><a href="https://www.martinstoeckli.ch/fontmap/fontmap_de.html"
+            target="_blank"><u>www.MartinStoeckli.ch</u></a></button>
+        <br>
+        <button><a href="placeholder" alt="placeholder" target="_blank"><u>Placeholder</u></a></button>
+        <button><a href="placeholder" alt="placeholder" target="_blank"><u>placeholder</u></a></button>
+        <button><a href="placeholder" alt="placeholder" target="_blank"><u>placeholder</u></a></button>
+        <button><a href="placeholder" alt="placeholder" target="_blank"><u>placeholder</u></a></button>
+      </nav>
+    </footer>
+    <hr>
+    <hr>
+  </center>
+</body>
+
+</html>

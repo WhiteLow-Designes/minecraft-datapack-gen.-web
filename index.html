@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Datapack Creator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Minecraft Datapack Creator</h1>
+        <form id="datapack-form">
+            <label for="name">Datapack Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required>
+
+            <label for="format">Pack Format:</label>
+            <select id="format" name="format" required>
+                <option value="11">1.19.4 - 1.20.6</option>
+                <option value="12">1.21 oder Neuer</option>
+            </select>
+
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author">
+
+            <hr>
+
+            <fieldset id="features">
+                <legend>Features:</legend>
+                <div class="feature">
+                    <input type="checkbox" id="night_vision" name="features" value="night_vision">
+                    <label for="night_vision">
+                        <img src="https://i.ytimg.com/vi/IUZIKit1F4E/maxresdefault.jpg" alt="Night Vision">
+                        <p>Permanent Night-Vision</p>
+                    </label>
+                </div>
+                <div class="feature">
+                    <input type="checkbox" id="speed_boost" name="features" value="speed_boost">
+                    <label for="speed_boost">
+                        <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/c/ce/Speed_JE3_BE2.png" alt="Speed Boost">
+                        <p>Speed Boost</p>
+                    </label>
+                </div>
+                <div class="feature">
+                    <input type="checkbox" id="auto_smelt" name="features" value="auto_smelt">
+                    <label for="auto_smelt">
+                        <img src="https://i.ytimg.com/vi/koPnxhxpfCk/maxresdefault.jpg" alt="Auto Smelt">
+                        <p>Autosmelt Ores</p>
+                    </label>
+                </div>
+                <div class="feature">
+                    <input type="checkbox" id="custom_recipes" name="features" value="custom_recipes">
+                    <label for="custom_recipes">
+                        <img src="https://i.ytimg.com/vi/Pt7y6PNP6KY/maxresdefault.jpg" alt="Custom Recipes">
+                        <p>Custom Crafting Recipes</p>
+                    </label>
+                </div>
+                <div class="feature">
+                    <input type="checkbox" id="rainbow_sheep" name="features" value="rainbow_sheep">
+                    <label for="rainbow_sheep">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOADoKnekAcLe_hNslrX24oajguFQIwtGg6A&s" alt="Rainbow Sheep">
+                        <p>Regenbogen Schaf</p>
+                    </label>
+                </div>
+            </fieldset>
+
+            <button type="submit">Create Custom-Datapack</button>
+        </form>
+    </div>
+</body>
+</html>
